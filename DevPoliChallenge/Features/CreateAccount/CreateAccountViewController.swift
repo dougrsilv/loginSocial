@@ -55,7 +55,7 @@ final class CreateAccountViewController: UIViewController {
             self.present(alert, animated: true)
         case false:
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { alert in
-                self.createAccountViewModelInput.pop()
+                self.createAccountViewModelInput.popCoordinator()
             }))
             self.present(alert, animated: true)
         }

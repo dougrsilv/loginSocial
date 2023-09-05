@@ -19,7 +19,7 @@ enum ErrorCreateUser {
 protocol CreateAccountViewModelInput {
     var delegate: CreateAccountViewModelOutput? { get set }
     func checkDataCreateUser(withCredential: CreateUserModel)
-    func pop()
+    func popCoordinator()
 }
 
 protocol CreateAccountViewModelOutput: AnyObject {
@@ -81,7 +81,7 @@ final class CreateAccountViewModel: CreateAccountViewModelInput {
         return emailPred.evaluate(with: email)
     }
     
-    func pop() {
+    func popCoordinator() {
         coordinator.pop()
     }
 }
