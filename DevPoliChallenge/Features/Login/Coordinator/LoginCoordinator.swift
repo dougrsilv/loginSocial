@@ -18,8 +18,9 @@ final class LoginCoordinator: Coordinator {
     
     func start() {
         let service = AuthService()
-        let viewModel = LoginViewModel(service: service, coordinator: self)
+        let viewModel = LoginViewModel(service: service)
         let loginViewController = LoginViewController(loginViewModelInput: viewModel)
+        viewModel.coordinator = self
         navigationController.setViewControllers([loginViewController], animated: false)
     }
     

@@ -18,8 +18,9 @@ final class CreateAccountCoordinator: Coordinator {
     
     func start() {
         let service = AuthService()
-        let viewModel = CreateAccountViewModel(service: service, coordinator: self)
+        let viewModel = CreateAccountViewModel(service: service)
         let createAccount = CreateAccountViewController(createAccountViewModelInput: viewModel)
+        viewModel.coordinator = self
         navigationController.pushViewController(createAccount, animated: true)
     }
     

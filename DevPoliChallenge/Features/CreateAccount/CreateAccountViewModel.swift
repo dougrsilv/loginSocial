@@ -31,11 +31,10 @@ final class CreateAccountViewModel: CreateAccountViewModelInput {
     
     weak var delegate: CreateAccountViewModelOutput?
     private let service: AuthServiceProtocol
-    private let coordinator: CreateAccountCoordinator
+    var coordinator: CreateAccountCoordinator?
     
-    init(service: AuthServiceProtocol, coordinator: CreateAccountCoordinator) {
+    init(service: AuthServiceProtocol) {
         self.service = service
-        self.coordinator = coordinator
     }
     
     func checkDataCreateUser(withCredential: CreateUserModel) {
@@ -82,6 +81,6 @@ final class CreateAccountViewModel: CreateAccountViewModelInput {
     }
     
     func popCoordinator() {
-        coordinator.pop()
+        coordinator?.pop()
     }
 }

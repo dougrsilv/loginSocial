@@ -11,4 +11,12 @@ target 'DevPoliChallenge' do
     pod 'FirebaseStorage'
     pod 'FirebaseFirestore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'master'
 
+  target 'DevPoliChallengeTests' do
+    inherit! :search_paths
+    # Pods for testing
+        
+     use_frameworks!
+     
+  end
+
 end

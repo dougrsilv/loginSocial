@@ -24,11 +24,10 @@ final class LoginViewModel: LoginViewModelInput {
     
     weak var delegate: LoginViewModelOutput?
     private let service: AuthServiceProtocol
-    private let coordinator: LoginCoordinator
+    var coordinator: LoginCoordinator?
     
-    init(service: AuthServiceProtocol, coordinator: LoginCoordinator) {
+    init(service: AuthServiceProtocol) {
         self.service = service
-        self.coordinator = coordinator
     }
     
     func fetchListLogin(email: String, password: String) {
@@ -45,10 +44,10 @@ final class LoginViewModel: LoginViewModelInput {
     }
     
     func navigationCreateAccount() {
-        coordinator.createAccountStart()
+        coordinator?.createAccountStart()
     }
     
     func navigationHome() {
-        coordinator.homeStart()
+        coordinator?.homeStart()
     }
 }
