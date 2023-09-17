@@ -12,12 +12,12 @@ protocol LoginViewModelInput {
     var delegate: LoginViewModelOutput? { get set}
     func fetchListLogin(email: String, password: String)
     func navigationCreateAccount()
-    func navigationHome()
+    func navigationHome(uid: AuthUser?)
 }
 
 protocol LoginViewModelOutput: AnyObject {
     func onFailure()
-    func onSuccess()
+    func onSuccess(uid: AuthUser?)
 }
 
 final class LoginViewModel: LoginViewModelInput {
@@ -33,13 +33,11 @@ final class LoginViewModel: LoginViewModelInput {
     func fetchListLogin(email: String, password: String) {
         service.logUserIn(email: email, password: password) { [weak self] resul, error in
             guard let self = self else { return }
-            DispatchQueue.main.async {
-                if error != nil {
-                    self.delegate?.onFailure()
-                    return
-                }
-                self.delegate?.onSuccess()
+            if error != nil {
+                self.delegate?.onFailure()
+                return
             }
+            self.delegate?.onSuccess(uid: resul)
         }
     }
     
@@ -47,7 +45,7 @@ final class LoginViewModel: LoginViewModelInput {
         coordinator?.createAccountStart()
     }
     
-    func navigationHome() {
-        coordinator?.homeStart()
+    func navigationHome(uid: AuthUser?) {
+        coordinator?.homeStart(uid: uid)
     }
 }

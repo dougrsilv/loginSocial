@@ -20,6 +20,7 @@ protocol CreateAccountViewModelInput {
     var delegate: CreateAccountViewModelOutput? { get set }
     func checkDataCreateUser(withCredential: CreateUserModel)
     func popCoordinator()
+    func fetchListCreateUser(withCredential: CreateUserModel)
 }
 
 protocol CreateAccountViewModelOutput: AnyObject {
@@ -49,29 +50,16 @@ final class CreateAccountViewModel: CreateAccountViewModelInput {
         }
     }
     
-    private func fetchListCreateUser(withCredential: CreateUserModel) {
+    func fetchListCreateUser(withCredential: CreateUserModel) {
         service.registerUser(withCredential: withCredential) { [weak self ] result, error  in
             guard let self = self else { return }
-            DispatchQueue.main.async {
                 if error != nil {
                     print("DEBUG: Failed to register user \(String(describing: error?.localizedDescription))")
                     self.delegate?.onFailure(error: .errorCreateUser)
                     return
                 }
-                
-                guard let uid = result?.user.uid else { return }
-                self.createUserUIdFirebase(uid: uid, withCredential: withCredential)
                 self.delegate?.onSucess()
-            }
         }
-    }
-    
-    private func createUserUIdFirebase(uid: String, withCredential: CreateUserModel) {
-        let data: [String: Any] = ["email": withCredential.email,
-                                   "fullname": withCredential.lastName,
-                                   "profileImageUrl": "teste", "uid": uid,
-                                   "username": withCredential.firsName]
-        Firestore.firestore().collection("users").document(uid).setData(data, completion: nil)
     }
     
     private func isValidEmail(_ email: String) -> Bool {

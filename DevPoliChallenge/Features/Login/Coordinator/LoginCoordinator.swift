@@ -29,8 +29,9 @@ final class LoginCoordinator: Coordinator {
         createAccountCoordinator.start()
     }
     
-    func homeStart() {
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+    func homeStart(uid: AuthUser?) {
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController,
+                                              uid: uid)
         homeCoordinator.start()
     }
 }

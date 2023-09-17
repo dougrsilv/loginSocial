@@ -53,7 +53,9 @@ final class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: LoginViewProtocol {
+// MARK: - LoginViewProtocol
+
+extension LoginViewController: LoginViewDelegate {
  
     func loginData(loginModel: LoginModel) {
         loginViewModelInput.fetchListLogin(email: loginModel.login,
@@ -65,12 +67,16 @@ extension LoginViewController: LoginViewProtocol {
     }
 }
 
+// MARK: - LoginViewModelOutput
+
 extension LoginViewController: LoginViewModelOutput {
     func onFailure() {
+        loginView.setupData()
         alertUser()
     }
     
-    func onSuccess() {
-        loginViewModelInput.navigationHome()
+    func onSuccess(uid: AuthUser?) {
+        loginView.setupData()
+        loginViewModelInput.navigationHome(uid: uid)
     }
 }

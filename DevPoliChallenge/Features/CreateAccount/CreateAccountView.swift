@@ -97,10 +97,19 @@ final class CreateAccountView: UIView {
     // MARK: - Functions
     
     private func setupKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(sender:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil);
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(sender:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil);
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIInputViewController.dismissKeyboard)
+        )
         addGestureRecognizer(tap)
     }
     
@@ -109,11 +118,21 @@ final class CreateAccountView: UIView {
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
-         self.frame.origin.y = -20
+        let keyboardFrame = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
+        guard let keyboardSize = (keyboardFrame as? NSValue)?.cgRectValue else { return }
+        
+        let contentInsets = UIEdgeInsets(top: 0,
+                                         left: 0,
+                                         bottom: keyboardSize.height,
+                                         right: 0
+        )
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {
-         self.frame.origin.y = 0
+        scrollView.contentInset = .zero
+        scrollView.scrollIndicatorInsets = .zero
     }
     
     private func setupLayout() {
@@ -175,7 +194,6 @@ final class CreateAccountView: UIView {
     }
     
     func setupStartAndStopAnimation(value: Bool) {
-        
         switch value {
         case true:
             activity.startAnimating()

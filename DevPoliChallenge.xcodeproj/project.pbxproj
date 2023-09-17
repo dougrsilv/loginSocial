@@ -23,10 +23,16 @@
 		DAC874052AA7FA260076B31A /* DevPoliChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */; };
 		DAC8740D2AA7FB530076B31A /* CreateAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8740C2AA7FB530076B31A /* CreateAccountViewModelTests.swift */; };
 		DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */; };
+		DAC874132AA805850076B31A /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC874122AA805850076B31A /* MockAuthService.swift */; };
+		DAC874152AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC874142AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift */; };
 		DAC9D34B2A93D05200512EF9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9D34A2A93D05200512EF9 /* AuthService.swift */; };
 		DAC9D34D2A93D3F500512EF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAC9D34C2A93D3F500512EF9 /* GoogleService-Info.plist */; };
 		DAC9D34F2A93D42900512EF9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9D34E2A93D42900512EF9 /* LoginViewModel.swift */; };
 		DAC9D3522A93EC1700512EF9 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9D3512A93EC1700512EF9 /* LoginModel.swift */; };
+		DACC14412AB5EA8E000AB830 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC14402AB5EA8E000AB830 /* HomeView.swift */; };
+		DACC14432AB5F634000AB830 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC14422AB5F634000AB830 /* CustomButton.swift */; };
+		DACDBCA62AB3D47400C71148 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDBCA52AB3D47400C71148 /* User.swift */; };
+		DACDBCA82AB3E4EE00C71148 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDBCA72AB3E4ED00C71148 /* HomeViewModel.swift */; };
 		DAD024CA2A8FD90800C953EA /* LoginFieldsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD024C92A8FD90800C953EA /* LoginFieldsLogin.swift */; };
 		DAD024CC2A9005A100C953EA /* ButtonSocialMediaLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD024CB2A9005A100C953EA /* ButtonSocialMediaLogin.swift */; };
 		DAD024CE2A9040C100C953EA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD024CD2A9040C100C953EA /* UIButton.swift */; };
@@ -49,6 +55,7 @@
 		DAD024F32A90486D00C953EA /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAD024E72A90486D00C953EA /* Roboto-BlackItalic.ttf */; };
 		DAD024F42A90486D00C953EA /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAD024E82A90486D00C953EA /* Roboto-Bold.ttf */; };
 		DAD024F52A90486D00C953EA /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAD024E92A90486D00C953EA /* Roboto-Medium.ttf */; };
+		DAD44C252AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD44C242AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift */; };
 		DAD4F6002A95347A0030796C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4F5FF2A95347A0030796C /* HomeViewController.swift */; };
 		DAD4F6032A953C470030796C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4F6022A953C470030796C /* CreateAccountViewController.swift */; };
 		DAD4F6052A95417A0030796C /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4F6042A95417A0030796C /* CreateAccountView.swift */; };
@@ -59,6 +66,7 @@
 		DADFF64F2AA0161500881291 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFF64E2AA0161500881291 /* LoginCoordinator.swift */; };
 		DADFF6522AA01B1200881291 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFF6512AA01B1200881291 /* CreateAccountCoordinator.swift */; };
 		DADFF6552AA01DDB00881291 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFF6542AA01DDB00881291 /* HomeCoordinator.swift */; };
+		DAE176CB2AB26E6F00E55843 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE176CA2AB26E6F00E55843 /* AuthUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,10 +102,16 @@
 		DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevPoliChallengeTests.swift; sourceTree = "<group>"; };
 		DAC8740C2AA7FB530076B31A /* CreateAccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelTests.swift; sourceTree = "<group>"; };
 		DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelInputSpy.swift; sourceTree = "<group>"; };
+		DAC874122AA805850076B31A /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		DAC874142AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelOutputSpy.swift; sourceTree = "<group>"; };
 		DAC9D34A2A93D05200512EF9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DAC9D34C2A93D3F500512EF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAC9D34E2A93D42900512EF9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DAC9D3512A93EC1700512EF9 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		DACC14402AB5EA8E000AB830 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DACC14422AB5F634000AB830 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DACDBCA52AB3D47400C71148 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DACDBCA72AB3E4ED00C71148 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DAD024C92A8FD90800C953EA /* LoginFieldsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFieldsLogin.swift; sourceTree = "<group>"; };
 		DAD024CB2A9005A100C953EA /* ButtonSocialMediaLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSocialMediaLogin.swift; sourceTree = "<group>"; };
 		DAD024CD2A9040C100C953EA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -120,6 +134,7 @@
 		DAD024E72A90486D00C953EA /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		DAD024E82A90486D00C953EA /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		DAD024E92A90486D00C953EA /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		DAD44C242AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewControllerTests.swift; sourceTree = "<group>"; };
 		DAD4F5FF2A95347A0030796C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DAD4F6022A953C470030796C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		DAD4F6042A95417A0030796C /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
@@ -130,6 +145,7 @@
 		DADFF64E2AA0161500881291 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		DADFF6512AA01B1200881291 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		DADFF6542AA01DDB00881291 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		DAE176CA2AB26E6F00E55843 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		F70A0A75758D502CA0B7B167 /* Pods-DevPoliChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPoliChallenge.release.xcconfig"; path = "Target Support Files/Pods-DevPoliChallenge/Pods-DevPoliChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		FBF3463F5FDE932BAC932801 /* Pods_DevPoliChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevPoliChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +176,7 @@
 				DAD024CF2A9047F400C953EA /* Font */,
 				4C33FF2D2A75A2640002E765 /* UIColor+ext.swift */,
 				DAD024CD2A9040C100C953EA /* UIButton.swift */,
+				DACC14422AB5F634000AB830 /* CustomButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -256,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				DAC874112AA802EC0076B31A /* Mock */,
-				DAC8740E2AA7FE490076B31A /* Doubles */,
 				DAC8740B2AA7FB220076B31A /* CreateAccountTests */,
 				DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */,
 			);
@@ -266,7 +282,9 @@
 		DAC8740B2AA7FB220076B31A /* CreateAccountTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAC8740E2AA7FE490076B31A /* Doubles */,
 				DAC8740C2AA7FB530076B31A /* CreateAccountViewModelTests.swift */,
+				DAD44C242AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift */,
 			);
 			path = CreateAccountTests;
 			sourceTree = "<group>";
@@ -275,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */,
+				DAC874142AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -282,6 +301,7 @@
 		DAC874112AA802EC0076B31A /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				DAC874122AA805850076B31A /* MockAuthService.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -299,6 +319,8 @@
 			children = (
 				DAC9D3512A93EC1700512EF9 /* LoginModel.swift */,
 				DAC6F2DF2A964442005DD137 /* CreateUserModel.swift */,
+				DAE176CA2AB26E6F00E55843 /* AuthUser.swift */,
+				DACDBCA52AB3D47400C71148 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +356,8 @@
 			children = (
 				DADFF6532AA01DC400881291 /* Coordinator */,
 				DAD4F5FF2A95347A0030796C /* HomeViewController.swift */,
+				DACDBCA72AB3E4ED00C71148 /* HomeViewModel.swift */,
+				DACC14402AB5EA8E000AB830 /* HomeView.swift */,
 			);
 			path = "Home ";
 			sourceTree = "<group>";
@@ -593,14 +617,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACDBCA62AB3D47400C71148 /* User.swift in Sources */,
+				DACC14412AB5EA8E000AB830 /* HomeView.swift in Sources */,
 				DADB461E2A8EE7A70082BED8 /* LoginViewController.swift in Sources */,
 				DADFF6522AA01B1200881291 /* CreateAccountCoordinator.swift in Sources */,
+				DACC14432AB5F634000AB830 /* CustomButton.swift in Sources */,
 				DAC9D3522A93EC1700512EF9 /* LoginModel.swift in Sources */,
+				DAE176CB2AB26E6F00E55843 /* AuthUser.swift in Sources */,
 				DAD024CC2A9005A100C953EA /* ButtonSocialMediaLogin.swift in Sources */,
 				4C3862A82A758819005C9C3B /* ViewController.swift in Sources */,
 				DADFF6552AA01DDB00881291 /* HomeCoordinator.swift in Sources */,
 				DADFF64F2AA0161500881291 /* LoginCoordinator.swift in Sources */,
 				DAC9D34B2A93D05200512EF9 /* AuthService.swift in Sources */,
+				DACDBCA82AB3E4EE00C71148 /* HomeViewModel.swift in Sources */,
 				DAD4F6002A95347A0030796C /* HomeViewController.swift in Sources */,
 				DADFF64C2AA0144600881291 /* AppCoordinator.swift in Sources */,
 				4C33FF352A75A4550002E765 /* DS+Colors.swift in Sources */,
@@ -624,9 +653,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD44C252AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift in Sources */,
 				DAC8740D2AA7FB530076B31A /* CreateAccountViewModelTests.swift in Sources */,
+				DAC874132AA805850076B31A /* MockAuthService.swift in Sources */,
 				DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */,
 				DAC874052AA7FA260076B31A /* DevPoliChallengeTests.swift in Sources */,
+				DAC874152AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

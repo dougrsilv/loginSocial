@@ -22,4 +22,8 @@ final class CreateAccountViewModelInputSpy: CreateAccountViewModelInput {
     func popCoordinator() {
         checkFuncPopCoordinator = true
     }
+    
+    func fetchListCreateUser(withCredential: CreateUserModel) {
+        //
+    }
 }

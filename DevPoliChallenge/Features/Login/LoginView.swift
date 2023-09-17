@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginViewProtocol: AnyObject {
+protocol LoginViewDelegate: AnyObject {
     func loginData(loginModel: LoginModel)
     func createNewAccount()
 }
@@ -17,7 +17,7 @@ final class LoginView: UIView {
     
     // MARK: - Properties
     
-    weak var delegate: LoginViewProtocol?
+    weak var delegate: LoginViewDelegate?
     
     private lazy var titleScreenLogin: UILabel = {
         let label = UILabel()
@@ -178,11 +178,24 @@ final class LoginView: UIView {
         ])
     }
     
+    func setupData() {
+        loginFieldsLogin.enterLogin.isEnabled = true
+        loginFieldsLogin.loginSpinner.isHidden = true
+        loginFieldsLogin.enterLogin.setTitle("Entrar", for: .normal)
+    }
+    
     private func setupKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(sender:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil);
 
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(sender:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil);
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(UIInputViewController.dismissKeyboard))
         addGestureRecognizer(tap)
     }
     
@@ -191,11 +204,21 @@ final class LoginView: UIView {
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
-         self.frame.origin.y = -20
+        let keyboardFrame = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
+        guard let keyboardSize = (keyboardFrame as? NSValue)?.cgRectValue else { return }
+        
+        let contentInsets = UIEdgeInsets(top: 0,
+                                         left: 0,
+                                         bottom: keyboardSize.height,
+                                         right: 0
+        )
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {
-         self.frame.origin.y = 0
+        scrollView.contentInset = .zero
+        scrollView.scrollIndicatorInsets = .zero
     }
     
     @objc func clickNewAccount() {
@@ -203,7 +226,9 @@ final class LoginView: UIView {
     }
 }
 
-extension LoginView: LoginFieldsLoginProtocol {
+// MARK: - LoginFieldsLoginProtocol
+
+extension LoginView: LoginFieldsLoginDelegate {
     func informationLogin(loginModel: LoginModel) {
         delegate?.loginData(loginModel: loginModel)
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginFieldsLoginProtocol: AnyObject {
+protocol LoginFieldsLoginDelegate: AnyObject {
     func informationLogin(loginModel: LoginModel)
 }
 
@@ -16,7 +16,7 @@ final class LoginFieldsLogin: UIView {
     
     // MARK: - Properties
     
-    weak var delegate: LoginFieldsLoginProtocol?
+    weak var delegate: LoginFieldsLoginDelegate?
     
     private lazy var loginUserLogin: UITextField = {
         let text = UITextField()
@@ -54,7 +54,7 @@ final class LoginFieldsLogin: UIView {
         return button
     }()
     
-    private lazy var enterLogin: UIButton = {
+    lazy var enterLogin: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Entrar", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
@@ -65,6 +65,17 @@ final class LoginFieldsLogin: UIView {
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    lazy var loginSpinner: UIActivityIndicatorView = {
+        let activity = UIActivityIndicatorView()
+        activity.hidesWhenStopped = true
+        activity.style = .medium
+        activity.startAnimating()
+        activity.color = .white
+        activity.translatesAutoresizingMaskIntoConstraints = false
+        activity.isHidden = true
+        return activity
     }()
     
     // MARK: - Lifecycle
@@ -85,6 +96,7 @@ final class LoginFieldsLogin: UIView {
         addSubview(passwordUserLogin)
         addSubview(forgotPasswordLogin)
         addSubview(enterLogin)
+        enterLogin.addSubview(loginSpinner)
         
         NSLayoutConstraint.activate([
             loginUserLogin.topAnchor.constraint(equalTo: topAnchor),
@@ -104,6 +116,9 @@ final class LoginFieldsLogin: UIView {
             enterLogin.centerXAnchor.constraint(equalTo: centerXAnchor),
             enterLogin.widthAnchor.constraint(equalToConstant: 294),
             enterLogin.heightAnchor.constraint(equalToConstant: 50),
+            
+            loginSpinner.centerXAnchor.constraint(equalTo: enterLogin.centerXAnchor),
+            loginSpinner.centerYAnchor.constraint(equalTo: enterLogin.centerYAnchor)
         ])
     }
     
@@ -125,5 +140,8 @@ final class LoginFieldsLogin: UIView {
         let model = LoginModel(login: loginUserLogin.text ?? "",
                                password: passwordUserLogin.text ?? "")
         delegate?.informationLogin(loginModel: model)
+        enterLogin.isEnabled = false
+        enterLogin.setTitle("", for: .normal)
+        loginSpinner.isHidden = false
     }
 }
