@@ -18,6 +18,7 @@
 		4C3862B02A75881C005C9C3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3862AE2A75881C005C9C3B /* LaunchScreen.storyboard */; };
 		93D7431F41ADA3BA5FD3B8D8 /* Pods_DevPoliChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392E0A63D9E849DE944711E9 /* Pods_DevPoliChallengeTests.framework */; };
 		DA40ECB0EECCF67A6684A954 /* Pods_DevPoliChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF3463F5FDE932BAC932801 /* Pods_DevPoliChallenge.framework */; };
+		DABE02542AB74CCD00E62775 /* CreateUserModelFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */; };
 		DAC6F2E02A964442005DD137 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F2DF2A964442005DD137 /* CreateUserModel.swift */; };
 		DAC6F2E22A964801005DD137 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F2E12A964801005DD137 /* CreateAccountViewModel.swift */; };
 		DAC874052AA7FA260076B31A /* DevPoliChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */; };
@@ -96,6 +97,7 @@
 		4C3862B12A75881C005C9C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80D3772221EA17916B9F622 /* Pods-DevPoliChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPoliChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		DA7A0FC40E366C3DB3A7C3B1 /* Pods-DevPoliChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPoliChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModelFake.swift; sourceTree = "<group>"; };
 		DAC6F2DF2A964442005DD137 /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
 		DAC6F2E12A964801005DD137 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		DAC874022AA7FA260076B31A /* DevPoliChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevPoliChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +296,7 @@
 			children = (
 				DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */,
 				DAC874142AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift */,
+				DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 			files = (
 				DAD44C252AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift in Sources */,
 				DAC8740D2AA7FB530076B31A /* CreateAccountViewModelTests.swift in Sources */,
+				DABE02542AB74CCD00E62775 /* CreateUserModelFake.swift in Sources */,
 				DAC874132AA805850076B31A /* MockAuthService.swift in Sources */,
 				DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */,
 				DAC874052AA7FA260076B31A /* DevPoliChallengeTests.swift in Sources */,

@@ -16,11 +16,7 @@ final class CreateAccountViewModelTests: XCTestCase {
         let spy = CreateAccountViewModelOutputSpy()
         let sut = CreateAccountViewModel(service: mock)
         sut.delegate = spy
-        sut.checkDataCreateUser(withCredential: CreateUserModel(firsName: "",
-                                                                lastName: "",
-                                                                email: "", password: "",
-                                                                confirmPassword: "")
-        )
+        sut.checkDataCreateUser(withCredential: CreateUserModelFake.noFieldFilledIn())
         XCTAssertTrue(spy.checkOnFailure)
     }
     
@@ -29,12 +25,7 @@ final class CreateAccountViewModelTests: XCTestCase {
         let spy = CreateAccountViewModelOutputSpy()
         let sut = CreateAccountViewModel(service: mock)
         sut.delegate = spy
-        sut.checkDataCreateUser(withCredential: CreateUserModel(firsName: "Carlos",
-                                                                lastName: "Souza",
-                                                                email: "",
-                                                                password: "123456",
-                                                                confirmPassword: "123456")
-        )
+        sut.checkDataCreateUser(withCredential: CreateUserModelFake.emailFieldNotFilled())
         XCTAssertTrue(spy.checkErrorInvalidEmail)
     }
     
@@ -43,12 +34,7 @@ final class CreateAccountViewModelTests: XCTestCase {
         let spy = CreateAccountViewModelOutputSpy()
         let sut = CreateAccountViewModel(service: mock)
         sut.delegate = spy
-        sut.checkDataCreateUser(withCredential: CreateUserModel(firsName: "Carlos",
-                                                                lastName: "Souza",
-                                                                email: "carlos@gmail.com.br",
-                                                                password: "1234",
-                                                                confirmPassword: "")
-        )
+        sut.checkDataCreateUser(withCredential: CreateUserModelFake.emptyPasswordConfirmationField())
         XCTAssertTrue(spy.checkInvalidCaracters)
     }
     
@@ -57,12 +43,7 @@ final class CreateAccountViewModelTests: XCTestCase {
         let spy = CreateAccountViewModelOutputSpy()
         let sut = CreateAccountViewModel(service: mock)
         sut.delegate = spy
-        sut.checkDataCreateUser(withCredential: CreateUserModel(firsName: "Carlos",
-                                                                lastName: "Souza",
-                                                                email: "carlos@gmail.com.br",
-                                                                password: "123456",
-                                                                confirmPassword: "1234567")
-        )
+        sut.checkDataCreateUser(withCredential: CreateUserModelFake.differentPasswordConfirmationField())
         XCTAssertTrue(spy.checkDireferentPassowrdAndConfirmPassowrd)
     }
     
@@ -72,14 +53,7 @@ final class CreateAccountViewModelTests: XCTestCase {
         let spy = CreateAccountViewModelOutputSpy()
         let sut = CreateAccountViewModel(service: mock)
         sut.delegate = spy
-
-        let model =  CreateUserModel(firsName: "Carlos",
-                                     lastName: "Souza",
-                                     email: "carlos@gmail.com.br",
-                                     password: "123456",
-                                     confirmPassword: "123456")
-        sut.fetchListCreateUser(withCredential: model)
-        
+        sut.fetchListCreateUser(withCredential: CreateUserModelFake.correctUserField())
         XCTAssertTrue(spy.checkOnSucess)
     }
     
@@ -89,14 +63,7 @@ final class CreateAccountViewModelTests: XCTestCase {
         let spy = CreateAccountViewModelOutputSpy()
         let sut = CreateAccountViewModel(service: mock)
         sut.delegate = spy
-
-        let model =  CreateUserModel(firsName: "Carlos",
-                                     lastName: "Souza",
-                                     email: "carlos@gmail.com.br",
-                                     password: "123456",
-                                     confirmPassword: "1234")
-        sut.fetchListCreateUser(withCredential: model)
-        
+        sut.fetchListCreateUser(withCredential: CreateUserModelFake.differentPasswordConfirmationField())
         XCTAssertTrue(spy.checkOnFailure)
     }
 }
