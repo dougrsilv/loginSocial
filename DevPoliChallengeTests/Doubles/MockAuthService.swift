@@ -15,9 +15,14 @@ import FirebaseFirestore
 final class MockAuthService: AuthServiceProtocol {
  
     var registeIsSucess: Bool = false
+    var loginIsManipulate: Bool = false
 
     func logUserIn(email: String, password: String, completion: @escaping (DevPoliChallenge.AuthUser?, Error?) -> Void) {
-        //
+        if loginIsManipulate {
+            completion(AuthUser(uid: "123"), nil)
+        } else {
+            completion(nil, MockError.noneError)
+        }
     }
     
     func fetchUser(withUid uid: String, completion: @escaping (DevPoliChallenge.User?, Error?) -> Void) {

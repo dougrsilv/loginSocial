@@ -19,9 +19,14 @@
 		93D7431F41ADA3BA5FD3B8D8 /* Pods_DevPoliChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392E0A63D9E849DE944711E9 /* Pods_DevPoliChallengeTests.framework */; };
 		DA40ECB0EECCF67A6684A954 /* Pods_DevPoliChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF3463F5FDE932BAC932801 /* Pods_DevPoliChallenge.framework */; };
 		DABE02542AB74CCD00E62775 /* CreateUserModelFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */; };
+		DABE02572AB7B97000E62775 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE02562AB7B97000E62775 /* LoginViewModelTests.swift */; };
+		DABE025A2AB7BA0400E62775 /* LoginViewModelOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE02592AB7BA0400E62775 /* LoginViewModelOutputSpy.swift */; };
+		DABE025C2AB7BECA00E62775 /* AuthUserFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE025B2AB7BECA00E62775 /* AuthUserFake.swift */; };
+		DABE025E2AB7BF8800E62775 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE025D2AB7BF8800E62775 /* LoginViewControllerTests.swift */; };
+		DABE02602AB7BFC800E62775 /* LoginViewModelInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE025F2AB7BFC800E62775 /* LoginViewModelInputSpy.swift */; };
+		DABE02622AB7C52800E62775 /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE02612AB7C52800E62775 /* SpyNavigationController.swift */; };
 		DAC6F2E02A964442005DD137 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F2DF2A964442005DD137 /* CreateUserModel.swift */; };
 		DAC6F2E22A964801005DD137 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6F2E12A964801005DD137 /* CreateAccountViewModel.swift */; };
-		DAC874052AA7FA260076B31A /* DevPoliChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */; };
 		DAC8740D2AA7FB530076B31A /* CreateAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8740C2AA7FB530076B31A /* CreateAccountViewModelTests.swift */; };
 		DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */; };
 		DAC874132AA805850076B31A /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC874122AA805850076B31A /* MockAuthService.swift */; };
@@ -98,10 +103,15 @@
 		A80D3772221EA17916B9F622 /* Pods-DevPoliChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPoliChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		DA7A0FC40E366C3DB3A7C3B1 /* Pods-DevPoliChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPoliChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModelFake.swift; sourceTree = "<group>"; };
+		DABE02562AB7B97000E62775 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		DABE02592AB7BA0400E62775 /* LoginViewModelOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelOutputSpy.swift; sourceTree = "<group>"; };
+		DABE025B2AB7BECA00E62775 /* AuthUserFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserFake.swift; sourceTree = "<group>"; };
+		DABE025D2AB7BF8800E62775 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		DABE025F2AB7BFC800E62775 /* LoginViewModelInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelInputSpy.swift; sourceTree = "<group>"; };
+		DABE02612AB7C52800E62775 /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 		DAC6F2DF2A964442005DD137 /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
 		DAC6F2E12A964801005DD137 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		DAC874022AA7FA260076B31A /* DevPoliChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevPoliChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevPoliChallengeTests.swift; sourceTree = "<group>"; };
 		DAC8740C2AA7FB530076B31A /* CreateAccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelTests.swift; sourceTree = "<group>"; };
 		DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelInputSpy.swift; sourceTree = "<group>"; };
 		DAC874122AA805850076B31A /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
@@ -271,12 +281,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DABE02552AB7B90400E62775 /* LoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				DABE02582AB7B9C900E62775 /* Doubles */,
+				DABE02562AB7B97000E62775 /* LoginViewModelTests.swift */,
+				DABE025D2AB7BF8800E62775 /* LoginViewControllerTests.swift */,
+			);
+			path = LoginTests;
+			sourceTree = "<group>";
+		};
+		DABE02582AB7B9C900E62775 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				DABE02592AB7BA0400E62775 /* LoginViewModelOutputSpy.swift */,
+				DABE025F2AB7BFC800E62775 /* LoginViewModelInputSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		DAC874032AA7FA260076B31A /* DevPoliChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAC874112AA802EC0076B31A /* Mock */,
+				DABE02552AB7B90400E62775 /* LoginTests */,
+				DAC874112AA802EC0076B31A /* Doubles */,
 				DAC8740B2AA7FB220076B31A /* CreateAccountTests */,
-				DAC874042AA7FA260076B31A /* DevPoliChallengeTests.swift */,
 			);
 			path = DevPoliChallengeTests;
 			sourceTree = "<group>";
@@ -296,17 +325,19 @@
 			children = (
 				DAC8740F2AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift */,
 				DAC874142AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift */,
-				DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
 		};
-		DAC874112AA802EC0076B31A /* Mock */ = {
+		DAC874112AA802EC0076B31A /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				DABE02532AB74CCD00E62775 /* CreateUserModelFake.swift */,
 				DAC874122AA805850076B31A /* MockAuthService.swift */,
+				DABE025B2AB7BECA00E62775 /* AuthUserFake.swift */,
+				DABE02612AB7C52800E62775 /* SpyNavigationController.swift */,
 			);
-			path = Mock;
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		DAC9D3492A93CFF700512EF9 /* Service */ = {
@@ -658,10 +689,15 @@
 			files = (
 				DAD44C252AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift in Sources */,
 				DAC8740D2AA7FB530076B31A /* CreateAccountViewModelTests.swift in Sources */,
+				DABE02602AB7BFC800E62775 /* LoginViewModelInputSpy.swift in Sources */,
+				DABE025C2AB7BECA00E62775 /* AuthUserFake.swift in Sources */,
+				DABE02622AB7C52800E62775 /* SpyNavigationController.swift in Sources */,
+				DABE025A2AB7BA0400E62775 /* LoginViewModelOutputSpy.swift in Sources */,
 				DABE02542AB74CCD00E62775 /* CreateUserModelFake.swift in Sources */,
 				DAC874132AA805850076B31A /* MockAuthService.swift in Sources */,
+				DABE02572AB7B97000E62775 /* LoginViewModelTests.swift in Sources */,
 				DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */,
-				DAC874052AA7FA260076B31A /* DevPoliChallengeTests.swift in Sources */,
+				DABE025E2AB7BF8800E62775 /* LoginViewControllerTests.swift in Sources */,
 				DAC874152AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
