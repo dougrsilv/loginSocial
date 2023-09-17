@@ -14,9 +14,19 @@ final class CreateAccountViewModelInputSpy: CreateAccountViewModelInput {
     var delegate: CreateAccountViewModelOutput?
     private(set) var checkFuncDataCreateUser: Bool = false
     private(set) var checkFuncPopCoordinator: Bool = false
+    private(set) var firsName: String = ""
+    private(set) var lastName: String = ""
+    private(set) var email: String = ""
+    private(set) var password: String = ""
+    private(set) var confirmPassword: String = ""
     
     func checkDataCreateUser(withCredential: CreateUserModel) {
         checkFuncDataCreateUser = true
+        firsName = withCredential.firsName
+        lastName = withCredential.lastName
+        email = withCredential.email
+        password = withCredential.password
+        confirmPassword = withCredential.confirmPassword
     }
     
     func popCoordinator() {
