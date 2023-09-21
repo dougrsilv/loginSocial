@@ -73,6 +73,9 @@
 		DADFF6522AA01B1200881291 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFF6512AA01B1200881291 /* CreateAccountCoordinator.swift */; };
 		DADFF6552AA01DDB00881291 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFF6542AA01DDB00881291 /* HomeCoordinator.swift */; };
 		DAE176CB2AB26E6F00E55843 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE176CA2AB26E6F00E55843 /* AuthUser.swift */; };
+		DAE274FC2ABBD113000BDB3E /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE274FB2ABBD113000BDB3E /* LoginViewTests.swift */; };
+		DAE274FE2ABBD338000BDB3E /* CreateAccountViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE274FD2ABBD338000BDB3E /* CreateAccountViewTests.swift */; };
+		DAE275012ABBD4D9000BDB3E /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE275002ABBD4D9000BDB3E /* HomeViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +161,9 @@
 		DADFF6512AA01B1200881291 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		DADFF6542AA01DDB00881291 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		DAE176CA2AB26E6F00E55843 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		DAE274FB2ABBD113000BDB3E /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
+		DAE274FD2ABBD338000BDB3E /* CreateAccountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewTests.swift; sourceTree = "<group>"; };
+		DAE275002ABBD4D9000BDB3E /* HomeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
 		F70A0A75758D502CA0B7B167 /* Pods-DevPoliChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPoliChallenge.release.xcconfig"; path = "Target Support Files/Pods-DevPoliChallenge/Pods-DevPoliChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		FBF3463F5FDE932BAC932801 /* Pods_DevPoliChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevPoliChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -287,6 +293,7 @@
 				DABE02582AB7B9C900E62775 /* Doubles */,
 				DABE02562AB7B97000E62775 /* LoginViewModelTests.swift */,
 				DABE025D2AB7BF8800E62775 /* LoginViewControllerTests.swift */,
+				DAE274FB2ABBD113000BDB3E /* LoginViewTests.swift */,
 			);
 			path = LoginTests;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 		DAC874032AA7FA260076B31A /* DevPoliChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAE274FF2ABBD49B000BDB3E /* HomeTests */,
 				DABE02552AB7B90400E62775 /* LoginTests */,
 				DAC874112AA802EC0076B31A /* Doubles */,
 				DAC8740B2AA7FB220076B31A /* CreateAccountTests */,
@@ -316,6 +324,7 @@
 				DAC8740E2AA7FE490076B31A /* Doubles */,
 				DAC8740C2AA7FB530076B31A /* CreateAccountViewModelTests.swift */,
 				DAD44C242AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift */,
+				DAE274FD2ABBD338000BDB3E /* CreateAccountViewTests.swift */,
 			);
 			path = CreateAccountTests;
 			sourceTree = "<group>";
@@ -453,6 +462,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		DAE274FF2ABBD49B000BDB3E /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAE275002ABBD4D9000BDB3E /* HomeViewTests.swift */,
+			);
+			path = HomeTests;
+			sourceTree = "<group>";
+		};
 		F51BF7C4F41BA611B0380559 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +509,7 @@
 				DAC873FE2AA7FA260076B31A /* Sources */,
 				DAC873FF2AA7FA260076B31A /* Frameworks */,
 				DAC874002AA7FA260076B31A /* Resources */,
+				A50678138541333924E57FCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -644,6 +662,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A50678138541333924E57FCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DevPoliChallengeTests/Pods-DevPoliChallengeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -694,8 +729,11 @@
 				DABE02622AB7C52800E62775 /* SpyNavigationController.swift in Sources */,
 				DABE025A2AB7BA0400E62775 /* LoginViewModelOutputSpy.swift in Sources */,
 				DABE02542AB74CCD00E62775 /* CreateUserModelFake.swift in Sources */,
+				DAE274FC2ABBD113000BDB3E /* LoginViewTests.swift in Sources */,
 				DAC874132AA805850076B31A /* MockAuthService.swift in Sources */,
+				DAE275012ABBD4D9000BDB3E /* HomeViewTests.swift in Sources */,
 				DABE02572AB7B97000E62775 /* LoginViewModelTests.swift in Sources */,
+				DAE274FE2ABBD338000BDB3E /* CreateAccountViewTests.swift in Sources */,
 				DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */,
 				DABE025E2AB7BF8800E62775 /* LoginViewControllerTests.swift in Sources */,
 				DAC874152AA807A30076B31A /* CreateAccountViewModelOutputSpy.swift in Sources */,

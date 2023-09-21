@@ -16,6 +16,7 @@ target 'DevPoliChallenge' do
     # Pods for testing
         
      use_frameworks!
+     pod 'iOSSnapshotTestCase'
      
   end
 
