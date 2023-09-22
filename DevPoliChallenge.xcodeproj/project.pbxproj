@@ -66,6 +66,11 @@
 		DAD4F6032A953C470030796C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4F6022A953C470030796C /* CreateAccountViewController.swift */; };
 		DAD4F6052A95417A0030796C /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4F6042A95417A0030796C /* CreateAccountView.swift */; };
 		DAD4F6072A95446B0030796C /* CreateAccountUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4F6062A95446B0030796C /* CreateAccountUserView.swift */; };
+		DAD8E91D2ABD24AA00E09609 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E91C2ABD24AA00E09609 /* HomeViewModelTests.swift */; };
+		DAD8E9202ABD254B00E09609 /* HomeViewModelOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E91F2ABD254B00E09609 /* HomeViewModelOutputSpy.swift */; };
+		DAD8E9222ABD269C00E09609 /* UserFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E9212ABD269C00E09609 /* UserFake.swift */; };
+		DAD8E9242ABD29A600E09609 /* HomeViewModelInputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E9232ABD29A600E09609 /* HomeViewModelInputSpy.swift */; };
+		DAD8E9262ABD2A6E00E09609 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E9252ABD2A6E00E09609 /* HomeViewControllerTests.swift */; };
 		DADB461E2A8EE7A70082BED8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB461D2A8EE7A70082BED8 /* LoginViewController.swift */; };
 		DADB46202A8EE8EB0082BED8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADB461F2A8EE8EB0082BED8 /* LoginView.swift */; };
 		DADFF64C2AA0144600881291 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFF64B2AA0144600881291 /* AppCoordinator.swift */; };
@@ -154,6 +159,11 @@
 		DAD4F6022A953C470030796C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		DAD4F6042A95417A0030796C /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		DAD4F6062A95446B0030796C /* CreateAccountUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUserView.swift; sourceTree = "<group>"; };
+		DAD8E91C2ABD24AA00E09609 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		DAD8E91F2ABD254B00E09609 /* HomeViewModelOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelOutputSpy.swift; sourceTree = "<group>"; };
+		DAD8E9212ABD269C00E09609 /* UserFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFake.swift; sourceTree = "<group>"; };
+		DAD8E9232ABD29A600E09609 /* HomeViewModelInputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelInputSpy.swift; sourceTree = "<group>"; };
+		DAD8E9252ABD2A6E00E09609 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		DADB461D2A8EE7A70082BED8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DADB461F2A8EE8EB0082BED8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DADFF64B2AA0144600881291 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -345,6 +355,7 @@
 				DAC874122AA805850076B31A /* MockAuthService.swift */,
 				DABE025B2AB7BECA00E62775 /* AuthUserFake.swift */,
 				DABE02612AB7C52800E62775 /* SpyNavigationController.swift */,
+				DAD8E9212ABD269C00E09609 /* UserFake.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -417,6 +428,15 @@
 			path = CreateAccount;
 			sourceTree = "<group>";
 		};
+		DAD8E91E2ABD250700E09609 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				DAD8E91F2ABD254B00E09609 /* HomeViewModelOutputSpy.swift */,
+				DAD8E9232ABD29A600E09609 /* HomeViewModelInputSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		DADB461C2A8EE7200082BED8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,7 +485,10 @@
 		DAE274FF2ABBD49B000BDB3E /* HomeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAD8E91E2ABD250700E09609 /* Doubles */,
 				DAE275002ABBD4D9000BDB3E /* HomeViewTests.swift */,
+				DAD8E91C2ABD24AA00E09609 /* HomeViewModelTests.swift */,
+				DAD8E9252ABD2A6E00E09609 /* HomeViewControllerTests.swift */,
 			);
 			path = HomeTests;
 			sourceTree = "<group>";
@@ -724,15 +747,20 @@
 			files = (
 				DAD44C252AAA97AE009AFEA7 /* CreateAccountViewControllerTests.swift in Sources */,
 				DAC8740D2AA7FB530076B31A /* CreateAccountViewModelTests.swift in Sources */,
+				DAD8E9202ABD254B00E09609 /* HomeViewModelOutputSpy.swift in Sources */,
 				DABE02602AB7BFC800E62775 /* LoginViewModelInputSpy.swift in Sources */,
 				DABE025C2AB7BECA00E62775 /* AuthUserFake.swift in Sources */,
 				DABE02622AB7C52800E62775 /* SpyNavigationController.swift in Sources */,
 				DABE025A2AB7BA0400E62775 /* LoginViewModelOutputSpy.swift in Sources */,
 				DABE02542AB74CCD00E62775 /* CreateUserModelFake.swift in Sources */,
 				DAE274FC2ABBD113000BDB3E /* LoginViewTests.swift in Sources */,
+				DAD8E9222ABD269C00E09609 /* UserFake.swift in Sources */,
 				DAC874132AA805850076B31A /* MockAuthService.swift in Sources */,
+				DAD8E9242ABD29A600E09609 /* HomeViewModelInputSpy.swift in Sources */,
 				DAE275012ABBD4D9000BDB3E /* HomeViewTests.swift in Sources */,
 				DABE02572AB7B97000E62775 /* LoginViewModelTests.swift in Sources */,
+				DAD8E91D2ABD24AA00E09609 /* HomeViewModelTests.swift in Sources */,
+				DAD8E9262ABD2A6E00E09609 /* HomeViewControllerTests.swift in Sources */,
 				DAE274FE2ABBD338000BDB3E /* CreateAccountViewTests.swift in Sources */,
 				DAC874102AA7FE6E0076B31A /* CreateAccountViewModelInputSpy.swift in Sources */,
 				DABE025E2AB7BF8800E62775 /* LoginViewControllerTests.swift in Sources */,

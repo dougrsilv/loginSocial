@@ -12,21 +12,14 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
-//    lazy var activity: UIActivityIndicatorView = {
-//        let activity = UIActivityIndicatorView()
-//        activity.hidesWhenStopped = true
-//        activity.startAnimating()
-//        return activity
-//    }()
-    
-    private let homeViewModel: HomeViewModel
+    private var homeViewModel: HomeViewModelInput
     private let homeView = HomeView()
     
     override func loadView() {
         view = homeView
     }
     
-    init(homeViewModel: HomeViewModel) {
+    init(homeViewModel: HomeViewModelInput) {
         self.homeViewModel = homeViewModel
         super.init(nibName: nil, bundle: nil)
     }
